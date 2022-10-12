@@ -25,14 +25,14 @@ The user should be able to see the list of tasks, add new ones, delete existing 
            Create a CSS class for the task list item with a border, a bold text and a bigger font size
            Style every button of the page to be bigger
         */
-      #myTaskList {
+      .task-list {
         background-color: beige;
       }
 
-      #myTaskList li {
+      .task-list li {
         font-size: 2em;
         font-weight: bold;
-        border: 1px soild brown;
+        border: 1px soild rgb(51, 82, 54);
       }
 
       input[type="button"] {
@@ -89,10 +89,21 @@ The user should be able to see the list of tasks, add new ones, delete existing 
               - Use the document.createElement to create the new List Item
               - Append the LI child to the UL
           */
+      let newTask = function () {
+        let UL = document.getElementById("myTaskList")
+        let newLI = document.createElement("li")
+        newLI.appendChild(document.createTextNode(newListContent))
+        UL.appendChild(newLI)
+      }
+
+      let newListContent = "this is my first task"
+      newTask()
 
       /* EXERCISE 6:
               Create a function "removeLast" which removes the last item from the task list
           */
+
+      let removeLast = function () {}
 
       /* EXERCISE 7:
               Create a function "removeFirst" which removes the first item from the task list
