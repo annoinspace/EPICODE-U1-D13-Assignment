@@ -57,7 +57,7 @@ The user should be able to see the list of tasks, add new ones, delete existing 
     <!-- EXERCISE 3
         Create a button "Remove Last Task" to trigger the function "removeLast"
         -->
-    <input type="button" value="Remove Last Task" onclick="removeLastTask()" />
+    <input type="button" value="Remove Last Task" onclick="removeLast()" />
 
     <!-- EXERCISE 4
         Create a button "Remove First Task" to trigger the function "removeFirst"
@@ -76,8 +76,6 @@ The user should be able to see the list of tasks, add new ones, delete existing 
     <input type="button" value="Sort" onclick="bubbleSort()" />
 
     <script>
-      let removeLastTask = function () {}
-
       /* EXERCISE 5:
                 Add a new task to the list.
                 Suggestion:
@@ -99,7 +97,8 @@ The user should be able to see the list of tasks, add new ones, delete existing 
             */
 
       let removeLast = function () {
-        let
+        let lastLi = UL.lastElementChild
+        lastLi.remove()
       }
 
       /* EXERCISE 7:
@@ -116,6 +115,15 @@ The user should be able to see the list of tasks, add new ones, delete existing 
       /* EXERCISE 8:
                Create a function "getTasksAsArray" which returns, and prints to the console an array containing the tasks as strings
             */
+      let getTasksAsArray = function () {
+        let liArrayItem = UL.getElementsByTagName("li")
+        let liArray = []
+        for (let lis of liArrayItem) {
+          let liContent = lis.innerText
+          liArray = liArray.concat(liContent)
+        }
+        console.log(liArray)
+      }
 
       /* EXERCISE 9:
                Create a function "changeTaskBackgroundColor" and attach it to the "Change task background" button via JavaScript (not via html attribute)
