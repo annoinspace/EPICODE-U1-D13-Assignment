@@ -83,54 +83,53 @@ The user should be able to see the list of tasks, add new ones, delete existing 
       let removeLastTask = function () {}
 
       /* EXERCISE 5:
-              Add a new task to the list.
-              Suggestion:
-              - Use document.getElementById to get the UL item and the input text
-              - Use the document.createElement to create the new List Item
-              - Append the LI child to the UL
-          */
-      let newTask = function () {
-        let UL = document.getElementById("myTaskList")
+                Add a new task to the list.
+                Suggestion:
+                - Use document.getElementById to get the UL item and the input text
+                - Use the document.createElement to create the new List Item
+                - Append the LI child to the UL
+            */
+      let UL = document.getElementById("myTaskList")
+
+      let addNewTask = function (content) {
         let newLI = document.createElement("li")
+        let newListContent = document.getElementById("newTask").value
         newLI.appendChild(document.createTextNode(newListContent))
         UL.appendChild(newLI)
       }
 
-      let newListContent = "this is my first task"
-      newTask()
-
       /* EXERCISE 6:
-              Create a function "removeLast" which removes the last item from the task list
-          */
+                Create a function "removeLast" which removes the last item from the task list
+            */
 
       let removeLast = function () {}
 
       /* EXERCISE 7:
-              Create a function "removeFirst" which removes the first item from the task list
-          */
+                Create a function "removeFirst" which removes the first item from the task list
+            */
 
       /* EXERCISE 8:
-             Create a function "getTasksAsArray" which returns, and prints to the console an array containing the tasks as strings
-          */
+               Create a function "getTasksAsArray" which returns, and prints to the console an array containing the tasks as strings
+            */
 
       /* EXERCISE 9:
-             Create a function "changeTaskBackgroundColor" and attach it to the "Change task background" button via JavaScript (not via html attribute)
-             Take the color from the color picker ad apply it as background to every list item
-    */
+               Create a function "changeTaskBackgroundColor" and attach it to the "Change task background" button via JavaScript (not via html attribute)
+               Take the color from the color picker ad apply it as background to every list item
+      */
 
       /* ### EXTRA ### */
 
       /* EXERCISE 10:
-              Attach an eventListener to each new task you create. When the task receives the click it should be removed (only the clicked task should disappear)
-    */
+                Attach an eventListener to each new task you create. When the task receives the click it should be removed (only the clicked task should disappear)
+      */
 
       /* EXERCISE 11:
-             Create a function "bubbleSort()" which sorts the task list alphabetically using the bubble sort algorithm
-    */
+               Create a function "bubbleSort()" which sorts the task list alphabetically using the bubble sort algorithm
+      */
 
       /* #### Suggestion:
-     - Break the code into many function for semplicity 
-     - Reuse the functions previously created */
+       - Break the code into many function for semplicity
+       - Reuse the functions previously created */
     </script>
   </body>
 </html>
